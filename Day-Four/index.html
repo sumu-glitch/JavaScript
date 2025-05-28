@@ -1,133 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <style>
-    body{
-        background: #000;
-        color: white;
-    }
-</style> -->
-
 <head>
-    <meta charset="UTF-8">
-    <link href="download.jpg" rel="icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datatypes</title>
+  <meta charset="UTF-8">
+  <link href="download.jpg" rel="icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Datatypes</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <nav class="navbar sticky">
+    <div class="logo">JS DataTypes</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#primitive">Primitive</a></li>
+      <li><a href="#non-primitive">Non-Primitive</a></li>
+      <li><a href="#typeof">Typeof</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" title="Toggle Theme">🌙</button>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </nav>
+
+  <div class="container">
     <h1>JavaScript DataTypes</h1>
-    <p>There are two types of datatypes </p>
-    <h3>1.Primitive</h3>
-    <h3>2.Non-Primitive</h3>
-    <h4>1.Primitive</h3>
-        <p>Primitive datatypes are the basic building blocks of data in JavaScript. They include:</p>
-        <ul>
-            <li>String</li>
-            <p>Ex:- let name = "John";</p>
-            <li>BigInt</li>
-            <p>Ex:- let bigNumber = 1234567890123456789012345678901234567890n;</p>
-            <li>Number</li>
-            <p>Ex:- let a = Number(6) </p>
-            <li>Boolean</li>
-            <p>Ex:- let a = true </p>
-            <li>Null</li>
-            <p>Ex:- let a = Null </p>
-            <li>Undefined</li>
-            <p>Ex:- let a = Undefined </p>
-            <li>Symbol (ES6)</li>
-            <p>Ex:- let a = Symbol(6) </p>
-        </ul>
-        <h4>2.Non-Primitive</h3>
-            <p>Non-primitive datatypes are more complex and can hold collections of values or more complex entities.
-                They include:</p>
-            <ul>
-                <li>Object</li>
-                <p>Ex:- let obj ={
-                    name: "John",
-                    age: 30,
-                    isStudent: false
-                    };
-                </p>
-                <li>Array</li>
-                <p>Ex:-
-                    let arr = [1, 2, 3, 4, 5];</p>
-                <li>Function</li>
-                <p>Ex:-
-                    function greet() {
-                    console.log("Hello, World!");
-                    }
-                </p></br>
-                <p>Othe type of non-primitive DataTypes</p>
-                <li>Date</li>
-                <p>Ex:-
-                    let currentDate = new Date();
-                </p>
-                <li>RegExp</li>
-                <p>Ex:-
-                    let regex = /ab+c/;
-                </p>
-                <li>Error</li>
-                <p>Ex:-
-                    let error = new Error("Something went wrong!");
-                </p>
-                <li>Map</li>
-                <p>Ex:-
-                    let map = new Map();
-                    map.set("key1", "value1");
-                    map.set("key2", "value2");
-                </p>
-                <li>Set</li>
-                <p>Ex:-
-                    let set = new Set();
-                    set.add(1);
-                    set.add(2);
-                    set.add(3);
-                </p>
-            </ul>
+    <p class="intro">There are two types of datatypes in JavaScript:</p>
 
-            <p>JavaScript is a dynamic language and not static</p>
-            <p>which means that variables can hold values of different types during runtime. Unlike languages such as
-                Typescript or Java, you don't need to declare the data type of a variable explicitly.</p>
-            <h3>Typeof Operator Result</h3>
-            <table>
-                <tr>
-                    <th>Typeof val</th>
-                    <th>Result</th>
-                </tr>
-                <tr>
-                    <td>Undefine</td>
-                    <td>Undefine</td>
-                </tr>
-                <tr>
-                    <td>Null</td>
-                    <td>"object"</td>
-                </tr>
-                <tr>
-                    <td>Boolean</td>
-                    <td>"boolean"</td>
-                </tr>
-                <tr>
-                    <td>Number</td>
-                    <td>"number"</td>
-                </tr>
-                <tr>
-                    <td>String</td>
-                    <td>"string"</td>
-                </tr>
-                <tr>
-                    <td>Object(Native and doesn't implement[[call]])</td>
-                    <td>"boject"</td>
-                </tr>
-                <tr>
-                    <td>Object(Native and host doesn't implement[[call]])</td>
-                    <td>"function"</td>
-                </tr>
-                <tr>
-                    <td>Object(Native and host doesn't implement[[call]])</td>
-                    <td>implementation-define may not be "undefine", "number", "boolean" and "string"</td>
-                </tr>
-            </table>
-            <script src="stringtonumber.js"></script>
+    <h3 id="primitive">1. Primitive</h3>
+    <p>Primitive datatypes are the basic building blocks of data in JavaScript. They include:</p>
+    <ol>
+      <li>String <p>Ex: <code>let name = "John";</code></p></li>
+      <li>BigInt <p>Ex: <code>let bigNumber = 1234567890n;</code></p></li>
+      <li>Number <p>Ex: <code>let a = Number(6);</code></p></li>
+      <li>Boolean <p>Ex: <code>let a = true;</code></p></li>
+      <li>Null <p>Ex: <code>let a = null;</code></p></li>
+      <li>Undefined <p>Ex: <code>let a = undefined;</code></p></li>
+      <li>Symbol <p>Ex: <code>let a = Symbol(6);</code></p></li>
+    </ol>
+
+    <h3 id="non-primitive">2. Non-Primitive</h3>
+    <p>Non-primitive datatypes are more complex:</p>
+    <ol start="8">
+      <li>Object <p>Ex: <code>let obj = { name: "John", age: 30 };</code></p></li>
+      <li>Array <p>Ex: <code>let arr = [1, 2, 3];</code></p></li>
+      <li>Function <p>Ex: <code>function greet() { console.log("Hello"); }</code></p></li>
+      <li>Date <p>Ex: <code>let currentDate = new Date();</code></p></li>
+      <li>RegExp <p>Ex: <code>let regex = /ab+c/;</code></p></li>
+      <li>Error <p>Ex: <code>let error = new Error("Oops!");</code></p></li>
+      <li>Map <p>Ex: <code>let map = new Map();</code></p></li>
+      <li>Set <p>Ex: <code>let set = new Set();</code></p></li>
+    </ol>
+
+    <p>JavaScript is a dynamic language. You don't need to define variable types explicitly like in TypeScript or Java.</p>
+
+    <h3 id="typeof">Typeof Operator Result</h3>
+    <div class="table-container">
+      <table>
+        <tr><th>Typeof val</th><th>Result</th></tr>
+        <tr><td>Undefined</td><td>"undefined"</td></tr>
+        <tr><td>Null</td><td>"object"</td></tr>
+        <tr><td>Boolean</td><td>"boolean"</td></tr>
+        <tr><td>Number</td><td>"number"</td></tr>
+        <tr><td>String</td><td>"string"</td></tr>
+        <tr><td>Object (non-callable)</td><td>"object"</td></tr>
+        <tr><td>Function (callable)</td><td>"function"</td></tr>
+        <tr><td>Host Object (callable)</td><td>implementation-defined</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById('hamburger');
+
+    // Restore saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      toggleBtn.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
-
 </html>
