@@ -124,6 +124,7 @@
         <li><strong>Stack Memory:</strong> Used for static memory allocation. It stores <u>primitive data types</u> and
           references to objects.
           <p>It's store a perticular element and create that element of copy.</p>
+          <p>A deep copy of an object is a copy whose properties do not share the same references</p>
           <p>Ex: </br><code>let a = 5;</br>
                       let b = a; // b is now a copy of a</br>
                       a = 10; // Changing a does not affect b</br>
@@ -133,6 +134,7 @@
         <li><strong>Heap Memory:</strong> Used for dynamic memory allocation. It stores <u>Non-Primitive</u> data types
           like (objects, arrays, and functions).
           <p>in this type of memory it will be give a reference of origional value.</p>
+          <p>A shallow copy of an object is a copy whose properties share the same references</p>
         </li>
         <p>Ex: </br><code>let obj1 = { name: "John" };</br>
                       let obj2 = obj1; // obj2 is a reference to obj1</br>
