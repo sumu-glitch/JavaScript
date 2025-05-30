@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link href="download.jpg" rel="icon">
@@ -7,11 +8,13 @@
   <title>JavaScript Datatypes</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Ubuntu:wght@700&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <nav class="navbar sticky">
     <div class="logo">JS DataTypes</div>
@@ -33,43 +36,113 @@
     <h3 id="primitive">1. Primitive</h3>
     <p>Primitive datatypes are the basic building blocks of data in JavaScript. They include:</p>
     <ol>
-      <li>String <p>Ex: <code>let name = "John";</code></p></li>
-      <li>BigInt <p>Ex: <code>let bigNumber = 1234567890n;</code></p></li>
-      <li>Number <p>Ex: <code>let a = Number(6);</code></p></li>
-      <li>Boolean <p>Ex: <code>let a = true;</code></p></li>
-      <li>Null <p>Ex: <code>let a = null;</code></p></li>
-      <li>Undefined <p>Ex: <code>let a = undefined;</code></p></li>
-      <li>Symbol <p>Ex: <code>let a = Symbol(6);</code></p></li>
+      <li>String <p>Ex: <code>let name = "John";</code></p>
+      </li>
+      <li>BigInt <p>Ex: <code>let bigNumber = 1234567890n;</code></p>
+      </li>
+      <li>Number <p>Ex: <code>let a = Number(6);</code></p>
+      </li>
+      <li>Boolean <p>Ex: <code>let a = true;</code></p>
+      </li>
+      <li>Null <p>Ex: <code>let a = null;</code></p>
+      </li>
+      <li>Undefined <p>Ex: <code>let a = undefined;</code></p>
+      </li>
+      <li>Symbol <p>Ex: <code>let a = Symbol(6);</code></p>
+      </li>
     </ol>
 
     <h3 id="non-primitive">2. Non-Primitive</h3>
     <p>Non-primitive datatypes are more complex:</p>
     <ol start="8">
-      <li>Object <p>Ex: <code>let obj = { name: "John", age: 30 };</code></p></li>
-      <li>Array <p>Ex: <code>let arr = [1, 2, 3];</code></p></li>
-      <li>Function <p>Ex: <code>function greet() { console.log("Hello"); }</code></p></li>
-      <li>Date <p>Ex: <code>let currentDate = new Date();</code></p></li>
-      <li>RegExp <p>Ex: <code>let regex = /ab+c/;</code></p></li>
-      <li>Error <p>Ex: <code>let error = new Error("Oops!");</code></p></li>
-      <li>Map <p>Ex: <code>let map = new Map();</code></p></li>
-      <li>Set <p>Ex: <code>let set = new Set();</code></p></li>
+      <li>Object <p>Ex: <code>let obj = { name: "John", age: 30 };</code></p>
+      </li>
+      <li>Array <p>Ex: <code>let arr = [1, 2, 3];</code></p>
+      </li>
+      <li>Function <p>Ex: <code>function greet() { console.log("Hello"); }</code></p>
+      </li>
+      <li>Date <p>Ex: <code>let currentDate = new Date();</code></p>
+      </li>
+      <li>RegExp <p>Ex: <code>let regex = /ab+c/;</code></p>
+      </li>
+      <li>Error <p>Ex: <code>let error = new Error("Oops!");</code></p>
+      </li>
+      <li>Map <p>Ex: <code>let map = new Map();</code></p>
+      </li>
+      <li>Set <p>Ex: <code>let set = new Set();</code></p>
+      </li>
     </ol>
 
-    <p>JavaScript is a dynamic language. You don't need to define variable types explicitly like in TypeScript or Java.</p>
+    <p>JavaScript is a dynamic language. You don't need to define variable types explicitly like in TypeScript or Java.
+    </p>
 
     <h3 id="typeof">Typeof Operator Result</h3>
     <div class="table-container">
       <table>
-        <tr><th>Typeof val</th><th>Result</th></tr>
-        <tr><td>Undefined</td><td>"undefined"</td></tr>
-        <tr><td>Null</td><td>"object"</td></tr>
-        <tr><td>Boolean</td><td>"boolean"</td></tr>
-        <tr><td>Number</td><td>"number"</td></tr>
-        <tr><td>String</td><td>"string"</td></tr>
-        <tr><td>Object (non-callable)</td><td>"object"</td></tr>
-        <tr><td>Function (callable)</td><td>"function"</td></tr>
-        <tr><td>Host Object (callable)</td><td>implementation-defined</td></tr>
+        <tr>
+          <th>Typeof val</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>Undefined</td>
+          <td>"undefined"</td>
+        </tr>
+        <tr>
+          <td>Null</td>
+          <td>"object"</td>
+        </tr>
+        <tr>
+          <td>Boolean</td>
+          <td>"boolean"</td>
+        </tr>
+        <tr>
+          <td>Number</td>
+          <td>"number"</td>
+        </tr>
+        <tr>
+          <td>String</td>
+          <td>"string"</td>
+        </tr>
+        <tr>
+          <td>Object (non-callable)</td>
+          <td>"object"</td>
+        </tr>
+        <tr>
+          <td>Function (callable)</td>
+          <td>"function"</td>
+        </tr>
+        <tr>
+          <td>Host Object (callable)</td>
+          <td>implementation-defined</td>
+        </tr>
       </table>
+    </div>
+    <div>
+      <h3>Stack() and Heap() Memory</h3>
+      <p>JavaScript uses two types of memory allocation:</p>
+      <ul>
+        <li><strong>Stack Memory:</strong> Used for static memory allocation. It stores <u>primitive data types</u> and
+          references to objects.
+          <p>It's store a perticular element and create that element of copy.</p>
+          <p>Ex: </br><code>let a = 5;</br>
+                      let b = a; // b is now a copy of a</br>
+                      a = 10; // Changing a does not affect b</br>
+                      console.log(b); // Output: 5</code>
+            </code></p>
+        </li>
+        <li><strong>Heap Memory:</strong> Used for dynamic memory allocation. It stores <u>Non-Primitive</u> data types
+          like (objects, arrays, and functions).
+          <p>in this type of memory it will be give a reference of origional value.</p>
+        </li>
+        <p>Ex: </br><code>let obj1 = { name: "John" };</br>
+                      let obj2 = obj1; // obj2 is a reference to obj1</br>
+                      obj1.name = "Doe"; // Changing obj1 affects obj2</br>
+                      console.log(obj2.name); // Output: Doe
+                    </code>
+        </p>
+
+        </code></p>
+      </ul>
     </div>
   </div>
 
@@ -96,4 +169,5 @@
     });
   </script>
 </body>
+
 </html>
