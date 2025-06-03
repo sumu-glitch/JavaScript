@@ -30,6 +30,12 @@ const user2 = {
 //most common tarika (spread operator(...))
 const user3 = {...user, ...user2};
 
-console.log(user3);
-console.log(user2.hasOwnProperty("v"));
+// console.log(user3);
+// console.log(user2.hasOwnProperty("v"));
+
+// console.log(Object.keys(user3));
+// console.log(Object.values(user3));
+console.log(Object.entries(user3));
+
+
 
