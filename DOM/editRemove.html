@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Edit-Remove</title>
+</head>
+
+<body style="background-color: #212121; color: aliceblue;">
+    <div>
+        <ul class="langName">
+            <li>JavaScript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    function addLang(langName) { //this functon are very leanthy because this is use dom traversion
+        const language = document.createElement('li');
+        language.innerHTML = `${langName}`;
+        document.querySelector('.langName').appendChild(language)
+    }
+    addLang("java");
+    addLang("Python");
+    addLang("Cpp");
+
+    function addOptiLanguage(langName) { //most effective function because this is add element directly
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.langName').appendChild(li)
+    }
+    addOptiLanguage("typescript")
+    addOptiLanguage("Ruby")
+
+    //Edit
+    function replace(ripLang) {
+        const secondLang = document.querySelector("li:nth-child(2)")
+        // secondLang.innerHTML = `${ripLang}`
+        const newLi = document.createElement('li');
+        console.log(newLi);
+        newLi.textContent = `${ripLang}`;
+        secondLang.replaceWith(newLi);
+    }
+    replace("GO-Lang")
+
+    const FirstLang = document.querySelector("li:nth-child(1)")
+    FirstLang.outerHTML = "<li>Cyber Security</li>"
+
+    //Delet
+    const deleteElement = document.querySelector("li:nth-child(6)")
+    deleteElement.remove();
+</script>
+
+</html>
