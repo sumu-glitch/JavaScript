@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+}
+.button{
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#button_Gray{
+    margin: 10px;
+    border-radius: 30px;
+    padding: 20px 40px;
+    background-color: rgba(192, 192, 192, 0.986);
+}
+#button_Green{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+    padding: 20px 40px;
+    background-color: rgb(131, 178, 131);
+}
+#button_Blue{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+    padding: 20px 40px;
+    background-color: rgb(129, 129, 197);
+}
+#button_Yellow{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+    padding: 20px 40px;
+    background-color: rgb(190, 190, 122);
+}
+#button_Gray:hover{
+    background-color: gray;
+    font-size: large;
+}
+#button_Green:hover{
+    background-color: green;
+    font-size: large;
+}
+#button_Blue:hover{
+    background-color: blue;
+    font-size: large;
+}
+#button_Yellow:hover{
+    background-color: yellow;
+    font-size: large;
+}
