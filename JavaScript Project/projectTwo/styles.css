@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+.heading{
+    color: rgb(255, 46, 46);
+    font-size: 30px;
+}
+.form{ 
+    color: rgb(209, 177, 79);
+    background-color: rgb(41, 41, 41);
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+}
+#height{
+   border-radius: 5px;
+    padding: 10px 30px;
+}
+#weight{
+    margin: 4px;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+.btn{
+    margin: 15px;
+}
+.button{
+    font-size: 24px;
+    background-color:greenyellow ;
+    padding: 5px 50px;
+    border-radius: 20px;
+
+}
+.button:hover{
+    background-color:rgb(154, 254, 5) ;
+    border: 2px solid greenyellow;
+
+}
