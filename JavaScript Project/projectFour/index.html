@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Guess Number</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h1 class="fade-in">Number Guessing Game</h1>
+      <p class="fade-in">Try to guess the random number based on the selected difficulty.</p>
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="10">Easy (1–10)</option>
+        <option value="50">Medium (1–50)</option>
+        <option value="100" selected>Hard (1–100)</option>
+      </select>
+      <form class="form">
+        <label for="guessField" class="heading">Guess a Number</label>
+        <input type="number" id="guessField" class="guessField" />
+        <input type="submit" id="guessSubmit" class="guessSubmit" value="Submit Guess" />
+      </form>
+    </div>
+    <div class="resultParas">
+      <p>Previous Guesses: <span class="guesses"></span></p>
+      <p>Guesses Remaining: <span class="lastResult">10</span></p>
+      <p class="loworHi"></p>
+    </div>
+  </div>
+  <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="wrong.mp3" preload="auto"></audio>
+  <audio id="gameOverSound" src="gameover.mp3" preload="auto"></audio>
+  <script src="main.js"></script>
+</body>
+</html>
