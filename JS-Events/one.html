@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body{
+            background-color:#212121;
+            color: aliceblue;
+        }
+        .img{
+            width: 25vw;
+            height: 25vh;
+        }
+        </style>
+</head>
+<body>
+    <div class="container" id="cont">
+        <ul class="box">
+            <li><img class="img" id="img_One" src="assets/daniel-josef-AMssSjUaTY4-unsplash.jpg" alt=""></li>
+            <li><img class="img" id="img_Two" src="assets/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg" alt=""></li>
+            <li><img class="img" id="img_Three" src="assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt=""></li>
+            <li><img class="img" id="img_Four" src="assets/surface-F4ottWBnCpM-unsplash.jpg" alt=""></li>
+             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>           
+        </ul>
+    </div>
+</body>
+<script>
+    /*
+    // this is not a write way..
+    document.getElementById('img_One').onclick = function() {
+        alert("Clicked");
+    }
+    
+    //this is best approch
+
+        document.getElementById('img_Two').addEventListener('click',(e)=>{
+            console.log(e);   
+        });
+        document.getElementById('cont').addEventListener('click',(e)=>{
+            console.log(e);
+               
+        },false);
+        document.getElementById('img_Three').addEventListener('click',(e)=>{
+            e.stopPropagation();
+            console.log("Three");   
+        },false);
+        */
+
+        document.getElementById('google').addEventListener('click',(e)=>{
+            // e.stopPropagation();
+            e.preventDefault();
+            console.log("Google");   
+        },false);
+
+
+        document.querySelector('.box').addEventListener('click',(e)=>{
+            console.log(e.target.id);
+            // console.log(e.target.parentNode);
+            if (e.target.tagName === 'IMG') {
+                let node = e.target.parentNode;
+                //new method
+                node.remove();
+            }
+            
+
+            //kafi jagah use hone vali aproch.
+            // node.parentNode.removeChild(node);
+        },false);
+
+    //
+</script>
+</html>
