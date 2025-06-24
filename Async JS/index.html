@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async - JS</title>
+    <style>
+        body {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="async">Async - JS</h1>
+    <button class="b1">Start</button>
+    <button class="b2">Stop</button>
+</body>
+<script>
+    let intervalId;
+    
+    document.querySelector(".b1").addEventListener('click', function () {
+         intervalId = setInterval(() => {
+             console.log("Welcome" , Date.now());
+         }, 2000)
+         console.log("Start BTN");
+ 
+     })
+
+    document.querySelector(".b2").addEventListener('click', function () {
+         clearInterval(intervalId);
+         console.log("stop BTN");
+     })
+
+</script>
+
+</html>
